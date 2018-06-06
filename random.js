@@ -1,10 +1,19 @@
 // Random Number Generator
-function getRandomNumber(upper) {
-  var randomNumber = Math.floor( Math.random() * upper ) + 1;
+function getRandomNumber(upper, lower) {
+  if (isNaN(upper) || isNaN(lower)){
+    throw new Error('Both arguements must be numbers');
+  }
+  var randomNumber = Math.floor( Math.random() * (upper - lower) ) + 1;
   return randomNumber;
 }
-console.log(getRandomNumber(10));
-console.log(getRandomNumber(100));
+
+
+console.log(getRandomNumber(4, 5));
+console.log(getRandomNumber(3,5));
+console.log(getRandomNumber('five', 2));
+console.log(getRandomNumber(1, 5));
+
+
 
 
 // Get the area
