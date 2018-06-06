@@ -8,9 +8,9 @@ console.log(getRandomNumber(100));
 
 
 // Get the area
-function getArea(width, length) {
+function getArea(width, length, unit) {
   var area = width * length;
-  return area;
+  return area + " " + unit;
 }
 
-console.log(getArea(10, 300))
+console.log(getArea(10, 300, 'sq ft'))
